@@ -1,0 +1,31 @@
+{
+  "name": "fit-with-nature",
+  "version": "1.0.0",
+  "description": "A personal trainer web app built with MERN, featuring GSAP and three.js.",
+  "homepage": "https://github.com/gina-t/fit-with-nature#readme",
+  "bugs": {
+    "url": "https://github.com/gina-t/fit-with-nature/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gina-t/fit-with-nature.git"
+  },
+  "license": "MIT",
+  "author": "ginadrcoder.net",
+  "type": "module",
+  "main": "server/dist/server.js",
+  "scripts": {
+    "start": "node server/dist/server.js",
+    "dev": "concurrently \"npm run dev:client\" \"npm run dev:server\"",
+    "dev:client": "cd client && npm run dev",
+    "dev:server": "cd server && npm run dev",
+    "build": "concurrently \"npm run build:client\" \"npm run build:server\"",
+    "build:client": "cd client && npm run build",
+    "build:server": "cd server && npm run build",
+    "render-build": "npm install --include=dev && cd server && npm install --include=dev && cd ../client && npm install --include=dev && cd .. && npm run build",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "concurrently": "^9.1.2"
+  }
+}
