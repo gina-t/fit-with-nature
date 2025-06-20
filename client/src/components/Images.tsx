@@ -7,11 +7,11 @@ import fit5 from '../assets/fit5.jpg';
 import fit6 from '../assets/fit6.jpg';
 import fit7 from '../assets/fit7.jpg';
 
-
 export default function Images(){
   return (
     <main className="images bg-blue-950">
       <section className="image-grid container">
+        {/* image one */}
         <picture className="image_cont">
           <source
             srcSet={fit1}
@@ -27,10 +27,10 @@ export default function Images(){
             data-speed="auto"
             className="opacity-50"
             src={fit1}
-            
-            alt=""
-          />
+            alt="female athlete"
+
         </picture>
+        {/* image two */}
         <div className="image_cont">
           <img
             data-speed="auto"
@@ -39,6 +39,7 @@ export default function Images(){
             alt=""
           />
         </div>
+        {/* image three */}
         <div className="image_cont">
           <img
             data-speed="auto"
@@ -47,6 +48,7 @@ export default function Images(){
             alt=""
           />
         </div>
+        {/* image four */}
         <div className="image_cont">
           <img
             data-speed="auto"
@@ -55,6 +57,7 @@ export default function Images(){
             alt=""
           />
         </div>
+        {/* image five */}
         <div className="image_cont">
           <img
             data-speed="auto"
@@ -63,6 +66,7 @@ export default function Images(){
             alt=""
           />
         </div>
+        {/* image six */}
         <div className="image_cont">
           <img
             data-speed="auto"
@@ -71,6 +75,7 @@ export default function Images(){
             alt=""
           />
         </div>
+        {/* image seven */}
         <div className="image_cont">
           <img
             data-speed="auto"
