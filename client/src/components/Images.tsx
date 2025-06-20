@@ -1,3 +1,4 @@
+
 import fit1 from '../assets/fit1.jpg';
 import fit2 from '../assets/fit2.jpg';
 import fit3 from '../assets/fit3.jpg';
@@ -27,7 +28,7 @@ export default function Images(){
             className="opacity-50"
             src={fit1}
             alt="female athlete"
-          />
+
         </picture>
         {/* image two */}
         <div className="image_cont">
