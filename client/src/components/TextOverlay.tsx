@@ -4,7 +4,6 @@ import { gsap } from 'gsap';
 import { SplitText } from 'gsap/SplitText';
 import { useGSAP } from '@gsap/react';
 
-
 gsap.registerPlugin(SplitText);
 
 export default function TextOverlay() {
@@ -89,7 +88,7 @@ export default function TextOverlay() {
             Fit With Nature
           </h2>
           <p className="mt-8 text-lg font-medium text-pretty text-gray-100 sm:text-xl/8">
-            Experience personalized fitness training with Brad Tonge.
+            Experience personalized coaching with Brad Tonge.
           </p>
         </div>
       </div>
@@ -97,7 +96,7 @@ export default function TextOverlay() {
       <div className="absolute bottom-32 left-0 right-0 z-10">
         <div className="mx-auto max-w-2xl text-center px-6">
           <p className="text-lg font-medium text-pretty text-gray-100 sm:text-xl/8">
-            Committed to helping you attain your health goals through tailored
+            Committed to helping you attain your exercise goals through tailored
             programmes and expert guidance.
           </p>
         </div>
