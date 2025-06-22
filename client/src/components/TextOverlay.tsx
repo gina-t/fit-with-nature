@@ -1,4 +1,3 @@
-// src/components/TextOverlay.tsx (renamed from Header.tsx)
 import { useRef } from 'react';
 import { gsap } from 'gsap';
 import { SplitText } from 'gsap/SplitText';
@@ -13,16 +12,14 @@ export default function TextOverlay() {
     () => {
       if (!overlayRef.current) return;
 
-      document.fonts.ready
-        .then(() => {
+      document.fonts.ready.then(() => {
           if (!overlayRef.current) return;
 
           const heading = overlayRef.current.querySelector('h2');
-          const subheading = overlayRef.current.querySelector('p'); // Get the subheading
-
+          const subheading = overlayRef.current.querySelectorAll('p'); 
           if (!heading || !subheading) return;
 
-          // Heading SplitText (your existing animation)
+          // Heading SplitText 
           const headingSplit = new SplitText(heading, {
             type: 'chars, words, lines',
             linesClass: 'line',
@@ -42,7 +39,7 @@ export default function TextOverlay() {
             ease: 'power2.out',
           });
 
-          // Subheading SplitText with random Y positions
+          // Subheading SplitText
           const subheadingSplit = new SplitText(subheading, {
             type: 'chars, words, lines',
             linesClass: 'line',
@@ -50,11 +47,8 @@ export default function TextOverlay() {
             charsClass: 'letter',
           });
 
-          // Animate subheading with random Y start positions
-          gsap.from(
-            subheadingSplit.chars,
-            {
-              y: 0,
+          gsap.from(subheadingSplit.chars, {
+              x: -100,
               autoAlpha: 0,
               stagger: {
                 amount: 1.0,
@@ -62,7 +56,8 @@ export default function TextOverlay() {
                 ease: 'power2.out',
 
             },
-       
+            duration: 1.0,
+            delay: 0.8,
             }
           );
         })
@@ -84,20 +79,20 @@ export default function TextOverlay() {
     >
       <div className="absolute top-28 left-0 right-0 z-10">
         <div className="mx-auto max-w-2xl text-center px-6">
-          <h2 className="text-5xl font-medium tracking-tight text-gray-100 sm:text-7xl">
+          <h2 className="text-5xl font-medium tracking-tight text-sky-300 sm:text-7xl">
             Fit With Nature
           </h2>
-          <p className="mt-8 text-lg font-medium text-pretty text-gray-100 sm:text-xl/8">
-            Experience personalized coaching with Brad Tonge.
+          <p className="mt-8 text-lg font-medium tracking-wide text-pretty text-gray-100 sm:text-xl/8">
+            Experience personalized coaching with Brad Tonge
           </p>
         </div>
       </div>
 
       <div className="absolute bottom-32 left-0 right-0 z-10">
         <div className="mx-auto max-w-2xl text-center px-6">
-          <p className="text-lg font-medium text-pretty text-gray-100 sm:text-xl/8">
-            Committed to helping you attain your exercise goals through tailored
-            programmes and expert guidance.
+          <p className="text-lg font-medium tracking-wide text-pretty text-gray-100 sm:text-xl/8">
+            Dedicated to transforming your fitness journey with tailored programmes and expert coaching that deliver real results
+            
           </p>
         </div>
       </div>
