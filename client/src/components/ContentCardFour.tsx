@@ -4,7 +4,8 @@ export default function ContentCardFour() {
       data-speed="auto"
       className="relative overflow-hidden shadow-2xl"
       style={{
-        background: `radial-gradient(
+        background: `
+          radial-gradient(
             ellipse 120% 80% at center,
               #1e3a8a 0%,
               #1e3a8a 15%,    
@@ -17,19 +18,19 @@ export default function ContentCardFour() {
     >
       <div className="relative z-10 backdrop-blur-[2px] bg-gradient-to-br from-black/5 to-black/20">
         <div className="px-6 py-8 sm:px-8 text-center">
-          <h3 className="text-2xl font-bold tracking-tight text-sky-300 sm:text-3xl drop-shadow-lg">
+          <h3 className="text-2xl font-bold tracking-tight text-sky-300 sm:text-3xl drop-shadow-lg mt-4">
             Let's Work Together
           </h3>
         </div>
         <div className="px-6 py-8 sm:p-8">
-          <p className="text-base text-balance leading-relaxed text-sky-100 sm:text-lg drop-shadow-md mb-6">
+          <p className="text-base text-balance leading-relaxed text-sky-100 sm:text-lg drop-shadow-md mb-4">
             Exercise and nutrition are integral to Brad's lifestyle, as is his
             connection to the natural environment, interacting through surfing,
             running and horticulture. Brad believes that combining structured
             training in outdoor settings creates the optimal foundation for
             physical, psychological and social well-being.
           </p>
-          <div className="text-base leading-relaxed text-sky-100 sm:text-lg space-y-2">
+          <div className="text-base leading-relaxed text-sky-100 sm:text-lg space-y-2 mb-4">
             <div>
               <span className="font-medium text-sky-300">Instagram: </span>
               <a

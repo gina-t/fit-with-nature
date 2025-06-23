@@ -2,6 +2,7 @@ import { useRef } from 'react';
 import { gsap } from 'gsap';
 import { SplitText } from 'gsap/SplitText';
 import { useGSAP } from '@gsap/react';
+import Glow from './Glow';
 
 gsap.registerPlugin(SplitText);
 
@@ -77,12 +78,18 @@ export default function TextOverlay() {
       id="text-overlay"
       className="text-overlay fixed inset-0 z-20 pointer-events-none px-6 py-24 sm:py-32 lg:px-8"
     >
+
+      {/* Move Glow to a higher z-index but still behind text */}
+    <div className="absolute inset-0 z-5">
+      <Glow />
+    </div>
+
       <div className="absolute top-28 left-0 right-0 z-10">
         <div className="mx-auto max-w-2xl text-center px-6">
           <h2 className="text-5xl font-medium tracking-tight text-sky-300 sm:text-7xl">
             Fit With Nature
           </h2>
-          <p className="mt-8 text-lg font-medium tracking-wide text-pretty text-gray-100 sm:text-xl/8">
+          <p className="mt-8 text-lg font-medium tracking-wide text-pretty text-sky-100 sm:text-xl/8">
             Experience personalized coaching with Brad Tonge
           </p>
         </div>
@@ -90,8 +97,8 @@ export default function TextOverlay() {
 
       <div className="absolute bottom-32 left-0 right-0 z-10">
         <div className="mx-auto max-w-2xl text-center px-6">
-          <p className="text-lg font-medium tracking-wide text-pretty text-gray-100 sm:text-xl/8">
-            Dedicated to transforming your fitness journey with tailored programmes and expert coaching that deliver real results
+          <p className="text-lg font-medium tracking-wide text-pretty text-sky-100 sm:text-xl/8">
+            Tailored programmes and expert coaching that deliver real results
             
           </p>
         </div>

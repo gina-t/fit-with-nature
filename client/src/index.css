@@ -1,5 +1,12 @@
-/* global css */
+/* FOUC Prevention - MUST BE FIRST */
+body,
+html {
+  background-color: #172554 !important;
+  margin: 0;
+  padding: 0;
+}
 
+/* global css */
 @import 'tailwindcss';
 
 @font-face {

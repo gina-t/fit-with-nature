@@ -1,22 +1,31 @@
 import { useId } from 'react';
 
 export default function Glow() {
-  const id = useId(); // ✅ Generates unique ID each render
-
+  const id = useId();
   return (
-    <div className="absolute inset-0 -z-10 overflow-hidden bg-gray-950 lg:right-[calc(max(2rem,50%-38rem)+40rem)] lg:min-w-[32rem]">
-      <svg
-        className="absolute -bottom-48 left-[-40%] h-[80rem] w-[180%] lg:top-[-40%] lg:-right-40 lg:bottom-auto lg:left-auto lg:h-[180%] lg:w-[80rem]"
-        aria-hidden="true"
-      >
+    <div className="absolute inset-0 -z-10 overflow-hidden">
+      <svg className="absolute inset-0 w-full h-full" aria-hidden="true">
         <defs>
-          <radialGradient id={`${id}-desktop`} cx="100%">
-            <stop offset="0%" stopColor="rgba(56, 189, 248, 0.3)" />
+          <radialGradient id={`${id}-desktop`} cx="80%" cy="50%">
+            <stop offset="0%" stopColor="rgba(56, 189, 248, 0.4)">
+              <animate
+                attributeName="stop-opacity"
+                values="0.3;0.5;0.3"
+                dur="4s"
+                repeatCount="indefinite"
+              />
+            </stop>
             <stop offset="53.95%" stopColor="rgba(0, 71, 255, 0.09)" />
             <stop offset="100%" stopColor="rgba(10, 14, 23, 0)" />
           </radialGradient>
-          <radialGradient id={`${id}-mobile`} cy="100%">
+          <radialGradient id={`${id}-mobile`} cx="50%" cy="50%">
             <stop offset="0%" stopColor="rgba(56, 189, 248, 0.3)" />
+              <animate
+                attributeName="stop-opacity"
+                values="0.3;0.5;0.3"
+                dur="4s"
+                repeatCount="indefinite"
+              />
             <stop offset="53.95%" stopColor="rgba(0, 71, 255, 0.09)" />
             <stop offset="100%" stopColor="rgba(10, 14, 23, 0)" />
           </radialGradient>
@@ -34,7 +43,6 @@ export default function Glow() {
           className="lg:hidden"
         />
       </svg>
-      <div className="absolute inset-x-0 right-0 bottom-0 h-px bg-white mix-blend-overlay lg:top-0 lg:left-auto lg:h-auto lg:w-px" />
     </div>
   );
 }

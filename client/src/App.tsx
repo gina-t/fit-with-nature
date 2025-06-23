@@ -7,6 +7,9 @@ import { ScrollToPlugin } from 'gsap/ScrollToPlugin';
 import { SplitText } from 'gsap/SplitText';
 import { useGSAP } from '@gsap/react';
 
+import './index.css'; 
+import './styles.css'
+
 // Register plugins
 gsap.registerPlugin(
   ScrollSmoother,

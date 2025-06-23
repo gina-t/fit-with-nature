@@ -4,7 +4,8 @@ export default function ContentCardThree() {
       data-speed="auto"
       className="relative overflow-hidden shadow-2xl"
       style={{
-        background: `radial-gradient(
+        background: 
+          `radial-gradient(
             ellipse 120% 80% at center,
               #1e3a8a 0%,
               #1e3a8a 15%,    
@@ -17,26 +18,24 @@ export default function ContentCardThree() {
     >
       <div className="relative z-10 backdrop-blur-[2px] bg-gradient-to-br from-black/5 to-black/20">
         <div className="px-6 py-8 sm:px-8 text-center">
-          <h3 className="text-2xl font-bold tracking-tight text-sky-300 sm:text-3xl drop-shadow-lg">
+          <h3 className="text-2xl font-bold tracking-tight text-sky-300 sm:text-3xl drop-shadow-lg mt-4">
             Structured Training
           </h3>
         </div>
         <div className="px-6 py-8 sm:p-8">
           <p className="text-base text-balance leading-relaxed text-sky-100 sm:text-lg drop-shadow-md mb-4">
-            Structured training that emphasizes the importance of planning,
-            consistency, and monitoring progress is available through:
+            Brad offers structured training plans through one-to-one, group, outdoor, studio and online sessions. The benefits of structured training plans, as opposed to random workouts, are
           </p>
-          <ul className="text-sm leading-relaxed text-sky-100 drop-shadow-md mt-2 space-y-1 pl-2 list-disc marker:text-sky-300 marker:text-xs">
-            <li className="ml-2">One to one personal training</li>
-            <li className="ml-2">Group training</li>
-            <li className="ml-2">Online training</li>
-            <li className="ml-2">Outdoor training</li>
-            <li className="ml-2">Studio training</li>
+          <ul className="text-sm leading-relaxed text-sky-100 drop-shadow-md mt-2 space-y-1 pl-2 list-disc marker:text-sky-300 marker:text-xs mb-4">
+            <li className="ml-2">Progressive overload</li>
+            <li className="ml-2">Goal alignment</li>
+            <li className="ml-2">Skill mastery</li>
+            <li className="ml-2">Minimise plateaus</li>
+            <li className="ml-2">Measurement and tracking</li>
+            <li className="ml-2">Predictability</li>
           </ul>
-          <p className="mt-4 text-base text-balance leading-relaxed text-sky-100 sm:text-lg drop-shadow-md">
-            By adhering to a structured training programme, clients can achieve
-            their exercise and rehab objectives more efficiently and
-            sustainably.
+          <p className="mt-4 text-base text-balance leading-relaxed text-sky-100 sm:text-lg drop-shadow-md mb-4">
+            Structured training plans facilitate consistent gains, are goal-oriented, enable focused skill advancements, prevent stagnation, measure progress, and promote psychological reassurance.
           </p>
         </div>
       </div>
