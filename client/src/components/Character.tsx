@@ -22,10 +22,10 @@ export function Character(props: React.ComponentProps<'group'>) {
 
           materials.forEach((material) => {
             if (material instanceof THREE.MeshStandardMaterial) {
-              material.wireframe = true; // Enable wireframe
-              material.emissive.setHex(0xE8F9FF);
-              material.emissiveIntensity = 0.3;
-              
+              material.wireframe = true;
+              material.color.setHex(0x7dd3fc); // Set BASE color to sky blue
+              material.emissive.setHex(0x7dd3fc); // Set GLOW color to sky blue
+              material.emissiveIntensity = 0.5;
             }
           });
         }
@@ -42,10 +42,23 @@ export function Character(props: React.ComponentProps<'group'>) {
           gltf.animations.length,
           'animations'
         );
+
+        // 🧹 CLEANUP: Properly dispose of old animation mixer
+        if (mixerRef.current) {
+          mixerRef.current.stopAllAction(); // Stop all running animations
+          mixerRef.current = null; // Clear reference
+        }
+
+        // 🎬 SETUP: Create fresh mixer and action
         mixerRef.current = new THREE.AnimationMixer(model);
         const action = mixerRef.current.clipAction(gltf.animations[0]);
-        action.play();
-        console.log('Animation started');
+
+        // ⚙️ CONFIGURE: Ensure animation plays correctly
+        action.reset(); // Start from frame 0
+        action.setLoop(THREE.LoopRepeat, Infinity); // Loop forever
+        action.play(); // Start playing
+
+        console.log(`Animation started:`, gltf.animations[0].name);
       }
     }
   }, [gltf]);
