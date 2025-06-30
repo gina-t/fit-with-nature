@@ -1,6 +1,7 @@
+
 export default function ContinuousScroll() {
   return (
-    <div className="three-graphic-container h-screen relative">
+    <div className="h-screen relative">
     </div>
   );
 }

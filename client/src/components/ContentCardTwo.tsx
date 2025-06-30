@@ -23,7 +23,7 @@ export default function ContentCardTwo() {
           </h3>
         </div>
         <div className="px-6 py-8 sm:p-8">
-          <ul className="text-sm leading-relaxed text-sky-100 drop-shadow-md mt-2 space-y-1 pl-2 list-disc marker:text-sky-300 marker:text-xs mb-4">
+          <ul className="text-base leading-relaxed text-sky-100 drop-shadow-md mt-2 space-y-1 pl-2 list-disc marker:text-sky-300 marker:text-xs mb-4">
             <li className="ml-2">Certificate IV Personal Training</li>
             <li className="ml-2">Certificate IV Training and Assessment</li>
             <li className="ml-2">Pregnancy and Postnatal Training</li>
@@ -31,9 +31,7 @@ export default function ContentCardTwo() {
             <li className="ml-2">Training Older Adults</li>
             <li className="ml-2">Injury Prevention for Runners and Athletes</li>
             <li className="ml-2">Postural Analysis and Dynamic Assessment</li>
-            <li className="ml-2">Restoring Optimal Function for Neck/Shoulder and Knee/Hip</li>
-            <li className="ml-2">Boot Camp Advanced Instructor</li>
-            <li className="ml-2">Certificate in Suspension Training</li>
+            <li className="ml-2">Restoring Optimal Function for Neck/Shoulder and Knee/Hip</li>  
           </ul>
         </div>
       </div>
