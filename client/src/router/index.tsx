@@ -5,6 +5,7 @@ import ContinuousScroll from '../views/ContinuousScroll';
 import Images from '../components/Images';
 import ThreeScene from '../components/ThreeScene';
 import TextOverlay from '../components/TextOverlay';
+import Footer from '../components/Footer';
 
 import gsap from 'gsap';
 import { ScrollSmoother } from 'gsap/ScrollSmoother';
@@ -44,6 +45,7 @@ export default function Router() {
                   <div>
                     <ContinuousScroll />
                     <Images />
+                    <Footer />
                   </div>
                 </TransitionComponent>
               }

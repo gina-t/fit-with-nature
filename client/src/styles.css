@@ -8,6 +8,37 @@ body {
   -webkit-overflow-scrolling: touch;
 }
 
+/* PREVENT FOUC FOR THREE.JS SCENE */
+.three-scene-container {
+  visibility: hidden; /* Hide until GSAP shows it */
+}
+
+/* PREVENT FOUC FOR CHARACTER TRANSITIONS */
+.character-controls {
+  visibility: hidden; /* Hide buttons until scene loads */
+}
+
+/* Optional: Loading state styling */
+.loading-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: #172554; /* Match your scene background */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  visibility: visible; /* Show loading by default */
+}
+
+.loading-text {
+  color: #7dd3fc; /* Match your character color */
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
 /* IMAGES */
 .container {
   max-width: 2500px;
@@ -15,14 +46,14 @@ body {
 }
 
 .spacer {
-  height: 100vh;
+  height: 20vh;
 }
 
 .image-grid {
   display: grid;
   grid-template-columns: repeat(12, 1fr);
   grid-column-gap: 1rem;
-  grid-row-gap: 33.3vh;
+  grid-row-gap: 30vh;
   width: 100vw;
   margin: 0 auto;
 }
@@ -52,7 +83,7 @@ body {
   grid-column: 2 / span 10;
   grid-row: 2;
   min-height: 80vh;
-  height:auto;
+  height: auto;
 }
 
 .image-grid .image_cont:nth-child(3) {
@@ -75,7 +106,7 @@ body {
   grid-column: 2 / span 10;
   grid-row: 5;
   min-height: 80vh;
-  height:auto;
+  height: auto;
 }
 
 .image-grid .image_cont:nth-child(6) {
@@ -94,7 +125,7 @@ body {
   grid-column: 2 / span 10;
   grid-row: 8;
   min-height: 80vh;
-  height:auto;
+  height: auto;
 }
 
 .image-grid .image_cont:nth-child(8) img {
@@ -111,9 +142,8 @@ body {
   grid-column: 2 / span 10;
   grid-row: 10;
   min-height: 60vh;
-  height:auto;
+  height: auto;
 }
-
 
 @media screen and (min-width: 1000px) {
   .image-grid .image_cont {
@@ -123,7 +153,7 @@ body {
   .image-grid .image_cont:nth-child(2) {
     grid-column: 2 / span 4;
     min-height: 60vh;
-    height:auto;
+    height: auto;
   }
 
   .image-grid .image_cont:nth-child(3) {
@@ -133,7 +163,7 @@ body {
   .image-grid .image_cont:nth-child(5) {
     grid-column: 8 / span 4;
     min-height: 60vh;
-    height:auto;
+    height: auto;
   }
 
   .image-grid .image_cont:nth-child(6) {
@@ -147,7 +177,7 @@ body {
   .image-grid .image_cont:nth-child(8) {
     grid-column: 2 / span 4;
     min-height: 60vh;
-    height:auto;
+    height: auto;
   }
 
   .image-grid .image_cont:nth-child(9) {
@@ -157,7 +187,7 @@ body {
   .image-grid .image_cont:nth-child(10) {
     grid-column: 8 / span 4;
     min-height: 60vh;
-    height:auto;
+    height: auto;
   }
 }
 
@@ -183,4 +213,3 @@ body {
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
   backdrop-filter: blur(1px);
 }
-
